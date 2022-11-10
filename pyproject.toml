@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rene"
+authors = [
+  { name="Daniele De Gregorio", email="daniele.degregorio@eyecan.ai" },
+]
+description = "ReNe Dataset package"
+readme = "README.md"
+license = { text="Proprietary License" }
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "License :: Other/Proprietary License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Software Development",
+]
+keywords = [
+    "api"
+]
+dependencies = [
+    "pipelime-python",
+]
+dynamic = [ "version" ]
+
+[project.optional-dependencies]
+tests = [
+    "pytest",
+    "pytest-cov",
+]
+dev = [
+    "pylama",
+    "black",
+    "flake8",
+]
+build = [
+    "hatch",
+    "build",
+]
+
+[project.scripts]
+rene = "rene.main:main"
+
+[tool.hatch.version]
+path = "rene/__init__.py"
