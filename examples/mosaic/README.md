@@ -7,3 +7,4 @@ Launch:
 python create_mosaic.py -i £{RENE_ROOT_FOLDER} -c cfgs/mosaic.yml -o /tmp/output_frames
 ```
 
+See `cfgs`foder for configuration files.
