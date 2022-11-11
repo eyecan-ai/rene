@@ -1,0 +1,9 @@
+object_id: -1 #[0,1,2,3,4,5,6,7,8,9]
+# object_id: 0
+cameras: [30,31] #,31]
+lights: [35,25] #,29]
+crop: [700, 390, 1200, 750]
+crop_type: center
+borders: 5
+borders_color: [255,255,255]
+outer_border: False

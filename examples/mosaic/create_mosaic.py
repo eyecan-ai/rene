@@ -15,6 +15,7 @@ class MosaicConfig(pydantic.BaseModel):
     cameras: list
     lights: list
     crop: Tuple[int, int, int, int] = [-1, -1, -1, -1]
+    crop_type: str = "tl"  # tl | center
     borders: int = 5
     borders_color: Tuple[int, int, int] = (255, 255, 255)
     outer_border: bool = False
@@ -60,7 +61,11 @@ def name(
 
     # manage multiple ids
     if isinstance(cfg.object_id, int):
-        cfg.object_id = [cfg.object_id]
+        if cfg.object_id == -1:
+            cfg.object_id = list(range(rene.num_objects()))
+            print("IDS", cfg.object_id)
+        else:
+            cfg.object_id = [cfg.object_id]
 
     # iterate objects ids
     for object_idx in cfg.object_id:
@@ -73,7 +78,15 @@ def name(
                 # crop image:
                 crop_x, crop_y, crop_w, crop_h = cfg.crop
                 if crop_x > 0:
-                    image = image[crop_y : crop_y + crop_h, crop_x : crop_x + crop_w]
+                    if cfg.crop_type == "tl":
+                        image = image[
+                            crop_y : crop_y + crop_h, crop_x : crop_x + crop_w
+                        ]
+                    elif cfg.crop_type == "center":
+                        image = image[
+                            crop_y - crop_h // 2 : crop_y + crop_h // 2,
+                            crop_x - crop_w // 2 : crop_x + crop_w // 2,
+                        ]
 
                 # add image borders
                 image = cv2.copyMakeBorder(
