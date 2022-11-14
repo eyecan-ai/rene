@@ -27,6 +27,7 @@ keywords = [
 ]
 dependencies = [
     "pipelime-python",
+    "albumentations"
 ]
 dynamic = [ "version" ]
 

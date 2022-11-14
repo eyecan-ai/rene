@@ -1,0 +1,6 @@
+object_ids: -1
+easy_camera_indices: [15]
+hard_light_indices: [2, 21, 34]
+hard_repeats: 6
+default_camera_index: 0
+resize: 300
