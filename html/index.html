@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="ReLight My NeRF: A Dataset for Novel View Synthesis and Relighting of Real World Objects">
+  <meta name="keywords" content="ReLight My NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReLight My NeRF: A Dataset for Novel View Synthesis and Relighting of Real World Objects</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">ReLight My NeRF: A Dataset for Novel View Synthesis and Relighting
+              of Real World Object</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a>Marco Toschi</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a>Riccardo Di Matteo</a><sup>3</sup>,</span>
+              <span class="author-block">
+                <a>Riccardo Spezialetti</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a>Daniele De Gregorio</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a>Luigi Di Stefano</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a>Samuele Salti</a><sup>2</sup>,
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>eyecan.ai,</span>
+              <span class="author-block"><sup>2</sup>University of Bologna</span>
+              <span class="author-block"><sup>3</sup>Work done while at eyecan.ai</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper (Soon)</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv (Soon)</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="https://www.youtube.com/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video (Soon)</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/eyecan-ai" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Soon)</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/eyecan-ai" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Data (Soon)</span>
+                  </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">STAY TUNED</span> for the full paper and code release!
+        </h2>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              In this paper, we focus on the problem of rendering novel
+              views from a Neural Radiance Field (NeRF) under unob-
+              served light conditions.
+            </p>
+            <p>
+              To this end, we introduce a novel
+              dataset, dubbed ReNe (Relighting NeRF), framing real
+              world objects under one-light-at-time (OLAT) conditions,
+              annotated with accurate ground-truth camera and light
+              poses.
+            </p>
+            <p>
+              Our acquisition pipeline leverages two robotic arms
+              holding, respectively, a camera and an omni-directional
+              point-wise light source. We release a total of 20 scenes
+              depicting a variety of objects with complex geometry and
+              challenging materials.
+              Each scene includes 2000 images, acquired from 50 different
+              points of views under 40 different OLAT conditions.
+              By leveraging the dataset, we perform an ablation study on the
+              relighting capability of variants of the vanilla NeRF architecture
+              and identify a lightweight architecture that can render novel
+              views of an object under novel light conditions, which we use to
+              establish a non-trivial baseline for the dataset.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <h3>Coming Soon!</h3>
+            <!-- <iframe src="https://www.youtube.com/" frameborder="0"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+          </div>
+        </div>
+      </div>
+      <!--/ Paper video. -->
+    </div>
+  </section>
+
+
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{toschi2023rene,
+  author    = {},
+  title     = {},
+  journal   = {},
+  year      = {2023},
+}</code></pre>
+    </div>
+  </section> -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="./static/paper/">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/eyecan-ai" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p style="text-align:center">
+              Website theme mainly borrowed from <a href="https://keunhong.com/">Keunhong Park</a>'s <a
+                href="https://nerfies.github.io/">Nerfies website</a>, thanks mate!.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
