@@ -51,11 +51,11 @@
               of Real World Object</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a>Marco Toschi</a><sup>1</sup>,</span>
+                <a>Marco Toschi</a><sup>1*</sup>,</span>
               <span class="author-block">
-                <a>Riccardo Di Matteo</a><sup>3</sup>,</span>
+                <a>Riccardo De Matteo</a><sup>3*</sup>,</span>
               <span class="author-block">
-                <a>Riccardo Spezialetti</a><sup>1</sup>,
+                <a>Riccardo Spezialetti</a><sup>1*</sup>,
               </span>
               <span class="author-block">
                 <a>Daniele De Gregorio</a><sup>1</sup>,
@@ -69,8 +69,9 @@
             </div>
 
             <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>*</sup>Joint first authorship,</span>
               <span class="author-block"><sup>1</sup>eyecan.ai,</span>
-              <span class="author-block"><sup>2</sup>University of Bologna</span>
+              <span class="author-block"><sup>2</sup>University of Bologna,</span>
               <span class="author-block"><sup>3</sup>Work done while at eyecan.ai</span>
             </div>
 
@@ -82,15 +83,15 @@
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
-                    <span>Paper (Soon)</span>
+                    <span>Paper</span>
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <a href="/static/paper/relight_my_nerf.pdf" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
-                    <span>arXiv (Soon)</span>
+                    <span>arXiv</span>
                   </a>
                 </span>
                 <!-- Video Link. -->
@@ -128,18 +129,128 @@
     </div>
   </section>
 
-  <!-- <section class="hero teaser">
+  <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
         <video id="teaser" autoplay muted loop playsinline height="100%">
-          <source src="./static/videos/" type="video/mp4">
+          <source src="./static/videos/relight_concept.mp4" type="video/mp4">
         </video>
-        <h2 class="subtitle has-text-centered">
-          <span class="dnerf">STAY TUNED</span> for the full paper and code release!
-        </h2>
       </div>
     </div>
-  </section> -->
+  </section>
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-robotoy">
+            <video poster="" id="robotoy" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mosaics/robotoy.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-apple">
+            <video poster="" id="apple" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mosaics/apple.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-cheetah">
+            <video poster="" id="cheetah" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mosaics/cheetah.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-cube">
+            <video poster="" id="cube" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mosaics/cube.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-dinosaurs">
+            <video poster="" id="dinosaurs" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mosaics/dinosaurs.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-flipflop">
+            <video poster="" id="flipflop" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mosaics/flipflop.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-fruits">
+            <video poster="" id="fruits" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mosaics/fruits.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-garden">
+            <video poster="" id="garden" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mosaics/garden.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-helicopters">
+            <video poster="" id="helicopters" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mosaics/helicopter.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-kittens">
+            <video poster="" id="kittens" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mosaics/kittens.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-lego">
+            <video poster="" id="lego" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mosaics/lego.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-lunch">
+            <video poster="" id="lunch" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mosaics/lunch.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-plant">
+            <video poster="" id="plant" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mosaics/plant.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-reflective">
+            <video poster="" id="reflective" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mosaics/reflective.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-savannah">
+            <video poster="" id="savannah" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mosaics/savannah.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-shark">
+            <video poster="" id="shark" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mosaics/shark.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-stegosaurus">
+            <video poster="" id="stegosaurus" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mosaics/stegosaurus.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-tapes">
+            <video poster="" id="tapes" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mosaics/tapes.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-trucks">
+            <video poster="" id="trucks" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mosaics/trucks.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-wooden">
+            <video poster="" id="wooden" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mosaics/wooden.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <p style="text-align: center;"><strong>Left: </strong>The ground-truth images of the object. <strong>Right:
+          </strong>The relit images of the
+          object
+          from three unseen point of views.</p>
+      </div>
+    </div>
+  </section>
 
   <section class="section">
     <div class="container is-max-desktop">
