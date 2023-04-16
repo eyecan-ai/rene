@@ -1,39 +1,42 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
-var INTERP_BASE = "./static/interpolation/stacked";
-var NUM_INTERP_FRAMES = 240;
+// var INTERP_BASE = "./static/interpolation/stacked";
+// var NUM_INTERP_FRAMES = 240;
 
-var interp_images = [];
-function preloadInterpolationImages() {
-  for (var i = 0; i < NUM_INTERP_FRAMES; i++) {
-    var path = INTERP_BASE + '/' + String(i).padStart(6, '0') + '.jpg';
-    interp_images[i] = new Image();
-    interp_images[i].src = path;
-  }
-}
+// var interp_images = [];
+// function preloadInterpolationImages() {
+//   for (var i = 0; i < NUM_INTERP_FRAMES; i++) {
+//     var path = INTERP_BASE + '/' + String(i).padStart(6, '0') + '.jpg';
+//     interp_images[i] = new Image();
+//     interp_images[i].src = path;
+//   }
+// }
 
-function setInterpolationImage(i) {
-  var image = interp_images[i];
-  image.ondragstart = function () { return false; };
-  image.oncontextmenu = function () { return false; };
-  $('#interpolation-image-wrapper').empty().append(image);
-}
+// function setInterpolationImage(i) {
+//   var image = interp_images[i];
+//   image.ondragstart = function () { return false; };
+//   image.oncontextmenu = function () { return false; };
+//   $('#interpolation-image-wrapper').empty().append(image);
+// }
 
 
 $(document).ready(function () {
   // Check for click events on the navbar burger icon
-  $(".navbar-burger").click(function () {
-    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-    $(".navbar-burger").toggleClass("is-active");
-    $(".navbar-menu").toggleClass("is-active");
+  // $(".navbar-burger").click(function () {
+  //   // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+  //   $(".navbar-burger").toggleClass("is-active");
+  //   $(".navbar-menu").toggleClass("is-active");
 
-  });
+  // });
+
+  const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+  observer.observe();
 
   var options = {
     slidesToScroll: 1,
     slidesToShow: 3,
     loop: true,
-    infinite: true,
+    infinite: false,
     autoplay: false,
     autoplaySpeed: 3000,
   }
@@ -77,29 +80,3 @@ $(document).ready(function () {
 
 })
 
-document.addEventListener("DOMContentLoaded", function () {
-  var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
-
-  if ("IntersectionObserver" in window) {
-    var lazyVideoObserver = new IntersectionObserver(function (entries, observer) {
-      entries.forEach(function (video) {
-        if (video.isIntersecting) {
-          for (var source in video.target.children) {
-            var videoSource = video.target.children[source];
-            if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
-              videoSource.src = videoSource.dataset.src;
-            }
-          }
-
-          video.target.load();
-          video.target.classList.remove("lazy");
-          lazyVideoObserver.unobserve(video.target);
-        }
-      });
-    });
-
-    lazyVideos.forEach(function (lazyVideo) {
-      lazyVideoObserver.observe(lazyVideo);
-    });
-  }
-});
