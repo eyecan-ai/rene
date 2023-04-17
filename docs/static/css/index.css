@@ -156,3 +156,99 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.slider-pagination {
+  position: relative;
+}
+
+.slider-pagination .slider-page {
+  background-color: hsl(48, 100%, 67%);
+}
+
+.pink {
+  font-family: "Lato", sans-serif;
+  font-size: 100px;
+  font-weight: 900;
+  /* color: #793eaf; */
+  text-shadow: 1px 1px hsl(171, 100%, 41%), 2px 2px hsl(171, 100%, 41%), 3px 3px hsl(171, 100%, 41%), 4px 4px hsl(171, 100%, 41%), 5px 5px hsl(171, 100%, 41%), 6px 6px hsl(171, 100%, 41%), 7px 7px hsl(171, 100%, 41%)
+}
+
+.grey {
+  font-family: "Lato", sans-serif;
+  font-size: 100px;
+  font-weight: 900;
+  text-shadow: 1px 1px hsl(48, 100%, 67%), 2px 2px hsl(48, 100%, 67%), 3px 3px hsl(48, 100%, 67%), 4px 4px hsl(48, 100%, 67%), 5px 5px hsl(48, 100%, 67%), 6px 6px hsl(48, 100%, 67%), 7px 7px hsl(48, 100%, 67%)
+}
+
+.blue {
+  font-family: "Lato", sans-serif;
+  font-size: 100px;
+  font-weight: 900;
+  text-shadow: 1px 1px hsl(300, 100%, 73%), 2px 2px hsl(300, 100%, 73%), 3px 3px hsl(300, 100%, 73%), 4px 4px hsl(300, 100%, 73%), 5px 5px hsl(300, 100%, 73%), 6px 6px hsl(300, 100%, 73%), 7px 7px hsl(300, 100%, 73%)
+}
+
+.legend-boxes {
+  border-radius: 10px;
+  /* border: 4px solid #FF67F5; */
+  /* margin: -20px; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.legend-box {
+  /* border: 4px solid #FF67F5; */
+  display: flex;
+  min-width: 45%;
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.estim {
+  border: 4px solid hsl(171, 100%, 41%);
+  margin-right: 4px;
+}
+
+.gt {
+  border: 4px solid hsl(141, 53%, 53%);
+  margin-left: 4px;
+}
+
+.legend-box:nth-child(1) {
+  margin-top: 4px;
+  border-top-left-radius: 15px;
+}
+
+.legend-box:nth-child(2) {
+  margin-top: 4px;
+  border-top-right-radius: 15px;
+}
+
+.legend-box:nth-child(5) {
+  margin-bottom: 4px;
+  border-bottom-left-radius: 15px;
+}
+
+.legend-box:nth-child(6) {
+  margin-bottom: 4px;
+  border-bottom-right-radius: 15px;
+}
+
+.legend-text-estim {
+  border-top-left-radius: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: hsl(171, 100%, 41%);
+}
+
+.legend-text-gt {
+  border-top-left-radius: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: hsl(141, 53%, 53%);
+}

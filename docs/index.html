@@ -33,7 +33,6 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
-  <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -41,6 +40,7 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+  <link rel="stylesheet" href="./static/css/index.css">
   <script src="./static/js/index.js"></script>
 </head>
 
@@ -51,9 +51,18 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">ReLight My NeRF: A Dataset for Novel View Synthesis and Relighting
-              of Real World Object</h1>
-            <div class="is-size-5 publication-authors">
+            <h1 class="title is-1 publication-title">
+              <span class="title is-1 pink">ReLight</span>
+              <span class="title is-1 grey">My</span>
+              <span class="title is-1 blue">NeRF</span>
+            </h1>
+            <h2 style="font-size: 1.8rem;" class="title is-1 publication-title">A Dataset for Novel View Synthesis and
+              Relighting of Real World Objects</h2>
+            <h2 style="font-size: 1.4rem; color: #303030; font-variant: small-caps;"
+              class="title is-2 publication-title">
+              highlight @ CVPR 2023
+            </h2>
+            <div class="is-size-6 publication-authors">
               <span class="author-block">
                 <a>Marco Toschi</a><sup>1*</sup>,</span>
               <span class="author-block">
@@ -72,7 +81,7 @@
               </span>
             </div>
 
-            <div class="is-size-5 publication-authors">
+            <div class="is-size-6 publication-authors">
               <span class="author-block"><sup>*</sup>Joint first authorship,</span>
               <span class="author-block"><sup>1</sup>eyecan.ai,</span>
               <span class="author-block"><sup>2</sup>University of Bologna,</span>
@@ -83,7 +92,8 @@
               <div class="publication-links">
                 <!-- PDF Link. -->
                 <span class="link-block">
-                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <a href="" class="external-link button is-normal is-rounded is-dark disabled"
+                    style="background-color:#808080; pointer-events: none;">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
@@ -91,7 +101,8 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="/static/paper/relight_my_nerf.pdf" class="external-link button is-normal is-rounded is-dark">
+                  <a href="/static/paper/relight_my_nerf.pdf" class="external-link button is-normal is-rounded is-dark"
+                    style="background-color:#808080; pointer-events: none;">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
@@ -100,29 +111,32 @@
                 </span>
                 <!-- Video Link. -->
                 <span class="link-block">
-                  <a href="https://www.youtube.com/" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://www.youtube.com/" class="external-link button is-normal is-rounded is-dark"
+                    style="background-color:#808080; pointer-events: none;">
                     <span class="icon">
                       <i class="fab fa-youtube"></i>
                     </span>
-                    <span>Video (Soon)</span>
+                    <span>Video</span>
                   </a>
                 </span>
                 <!-- Code Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/eyecan-ai" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://github.com/eyecan-ai" class="external-link button is-normal is-rounded is-dark"
+                    style="background-color:#808080; pointer-events: none;">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code (Soon)</span>
+                    <span>Code</span>
                   </a>
                 </span>
                 <!-- Dataset Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/eyecan-ai" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://github.com/eyecan-ai" class="external-link button is-normal is-rounded is-dark"
+                    style="background-color:#808080; pointer-events: none;">
                     <span class="icon">
                       <i class="far fa-images"></i>
                     </span>
-                    <span>Data (Soon)</span>
+                    <span>Data</span>
                   </a>
               </div>
 
@@ -268,11 +282,36 @@
               <source data-src="./static/videos/mosaics/wooden.mp4" type="video/mp4">
             </video>
           </div>
+          <div class="is-overlay">
+            <!-- <span class="tag is-primary">Image label on overlay</span> -->
+            <!-- <div class="legend-box"></div> -->
+            <div class="legend-boxes" id="first-legend-boxes">
+              <div class="legend-box gt">
+                <div class="legend-text-gt">cam 1 <strong>GT</strong></div>
+              </div>
+              <div class="legend-box estim">
+                <div class="legend-text-estim">cam 1 <strong>reNeRF</strong></div>
+              </div>
+              <div class="legend-box gt">
+                <div class="legend-text-gt">cam 2 <strong>GT</strong></div>
+              </div>
+              <div class="legend-box estim">
+                <div class="legend-text-estim">cam 2 <strong>reNeRF</strong></div>
+              </div>
+              <div class="legend-box gt">
+                <div class="legend-text-gt">cam 3 <strong>GT</strong></div>
+              </div>
+              <div class="legend-box estim">
+                <div class="legend-text-estim">cam 3 <strong>reNeRF</strong></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <p style="text-align: center;"><strong>Left: </strong>The ground-truth images of the object. <strong>Right:
-          </strong>The relit images of the
-          object
-          from three unseen point of views.</p>
+        <p style="text-align: center;"><strong style="color: hsl(141, 53%, 53%);">Left: </strong>Ground-truth
+          images from test-set.
+          <strong style="color: hsl(171, 100%, 41%);">Right:
+          </strong>The NeRF of the object given camera and light poses.
+        </p>
       </div>
     </div>
   </section>
@@ -286,8 +325,7 @@
           <div class="content has-text-justified">
             <p>
               In this paper, we focus on the problem of rendering novel
-              views from a Neural Radiance Field (NeRF) under unob-
-              served light conditions.
+              views from a Neural Radiance Field (NeRF) under unobserved light conditions.
             </p>
             <p>
               To this end, we introduce a novel
