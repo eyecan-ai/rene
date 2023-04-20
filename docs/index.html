@@ -7,54 +7,29 @@
     content="ReLight My NeRF: A Dataset for Novel View Synthesis and Relighting of Real World Objects">
   <meta name="keywords" content="ReLight My NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ReNe</title>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
+  <title>ReNé</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
-
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-
   <link rel="icon" href="./static/images/favicon.svg">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
   <link rel="stylesheet" href="./static/css/index.css">
-  <script src="./static/js/index.js"></script>
 </head>
 
 <body>
-
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">
-              <span class="title is-1 pink">ReLight</span>
-              <span class="title is-1 grey">My</span>
-              <span class="title is-1 blue">NeRF</span>
+              <span class="title is-1 cyan-shadow">ReLight</span>
+              <span class="title is-1 yellow-shadow">My</span>
+              <span class="title is-1 pink-shadow">NeRF</span>
             </h1>
             <h2 style="font-size: 1.8rem;" class="title is-1 publication-title">A Dataset for Novel View Synthesis and
               Relighting of Real World Objects</h2>
@@ -77,11 +52,11 @@
                 <a>Luigi Di Stefano</a><sup>2</sup>,
               </span>
               <span class="author-block">
-                <a>Samuele Salti</a><sup>2</sup>,
+                <a>Samuele Salti</a><sup>2</sup>
               </span>
             </div>
 
-            <div class="is-size-6 publication-authors">
+            <div class="is-size-7 publication-authors">
               <span class="author-block"><sup>*</sup>Joint first authorship,</span>
               <span class="author-block"><sup>1</sup>eyecan.ai,</span>
               <span class="author-block"><sup>2</sup>University of Bologna,</span>
@@ -139,7 +114,6 @@
                     <span>Data</span>
                   </a>
               </div>
-
             </div>
           </div>
         </div>
@@ -160,151 +134,149 @@
 
   <section class="hero is-light is-small">
     <div class="hero-body">
-      <div class="container">
-        <div id="results-carousel" class="carousel results-carousel">
+      <div class="container has-carousel">
+        <div id="results-carousel" class="hero-carousel results-carousel">
           <div class="item item-robotoy">
             <video class="lozad" data-poster="./static/videos/mosaics/robotoy.jpg" id="robotoy" autoplay muted loop
               playsinline height="100%">
               <source data-src="./static/videos/mosaics/robotoy.mp4" type="video/mp4">
             </video>
+            <div class="is-overlay" style="pointer-events:none;">
+              <div class="legend-boxes" id="first-legend-boxes">
+                <div class="legend-box gt">
+                  <div class="legend-text-gt">cam 1 <strong>GT</strong></div>
+                </div>
+                <div class="legend-box estim">
+                  <div class="legend-text-estim">cam 1 <strong>ReNé</strong></div>
+                </div>
+                <div class="legend-box gt">
+                  <div class="legend-text-gt">cam 2 <strong>GT</strong></div>
+                </div>
+                <div class="legend-box estim">
+                  <div class="legend-text-estim">cam 2 <strong>ReNé</strong></div>
+                </div>
+                <div class="legend-box gt">
+                  <div class="legend-text-gt">cam 3 <strong>GT</strong></div>
+                </div>
+                <div class="legend-box estim">
+                  <div class="legend-text-estim">cam 3 <strong>ReNé</strong></div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="item item-apple">
-            <video class="lozad" data-poster="./static/videos/mosaics/apple.jpg" id="apple" autoplay controls muted loop
+            <video class="lozad" data-poster="./static/videos/mosaics/apple.jpg" id="apple" autoplay muted loop
               playsinline height="100%">
               <source data-src="./static/videos/mosaics/apple.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-cheetah">
-            <video class="lozad" data-poster="./static/videos/mosaics/cheetah.jpg" id="cheetah" autoplay controls muted
-              loop playsinline height="100%">
+            <video class="lozad" data-poster="./static/videos/mosaics/cheetah.jpg" id="cheetah" autoplay muted loop
+              playsinline height="100%">
               <source data-src="./static/videos/mosaics/cheetah.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-cube">
-            <video class="lozad" data-poster="./static/videos/mosaics/cube.jpg" id="cube" autoplay controls muted loop
+            <video class="lozad" data-poster="./static/videos/mosaics/cube.jpg" id="cube" autoplay muted loop
               playsinline height="100%">
               <source data-src="./static/videos/mosaics/cube.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-dinosaurs">
-            <video class="lozad" data-poster="./static/videos/mosaics/dinosaurs.jpg" id="dinosaurs" autoplay controls
-              muted loop playsinline height="100%">
+            <video class="lozad" data-poster="./static/videos/mosaics/dinosaurs.jpg" id="dinosaurs" autoplay muted loop
+              playsinline height="100%">
               <source data-src="./static/videos/mosaics/dinosaurs.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-flipflop">
-            <video class="lozad" data-poster="./static/videos/mosaics/flipflop.jpg" id="flipflop" autoplay controls
-              muted loop playsinline height="100%">
+            <video class="lozad" data-poster="./static/videos/mosaics/flipflop.jpg" id="flipflop" autoplay muted loop
+              playsinline height="100%">
               <source data-src="./static/videos/mosaics/flipflop.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-fruits">
-            <video class="lozad" data-poster="./static/videos/mosaics/fruits.jpg" id="fruits" autoplay controls muted
-              loop playsinline height="100%">
+            <video class="lozad" data-poster="./static/videos/mosaics/fruits.jpg" id="fruits" autoplay muted loop
+              playsinline height="100%">
               <source data-src="./static/videos/mosaics/fruits.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-garden">
-            <video class="lozad" data-poster="./static/videos/mosaics/garden.jpg" id="garden" autoplay controls muted
-              loop playsinline height="100%">
+            <video class="lozad" data-poster="./static/videos/mosaics/garden.jpg" id="garden" autoplay muted loop
+              playsinline height="100%">
               <source data-src="./static/videos/mosaics/garden.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-helicopters">
-            <video class="lozad" data-poster="./static/videos/mosaics/helicopters.jpg" id="helicopters" autoplay
-              controls muted loop playsinline height="100%">
+            <video class="lozad" data-poster="./static/videos/mosaics/helicopters.jpg" id="helicopters" autoplay muted
+              loop playsinline height="100%">
               <source data-src="./static/videos/mosaics/helicopters.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-kittens">
-            <video class="lozad" data-poster="./static/videos/mosaics/kittens.jpg" id="kittens" autoplay controls muted
-              loop playsinline height="100%">
+            <video class="lozad" data-poster="./static/videos/mosaics/kittens.jpg" id="kittens" autoplay muted loop
+              playsinline height="100%">
               <source data-src="./static/videos/mosaics/kittens.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-lego">
-            <video class="lozad" data-poster="./static/videos/mosaics/lego.jpg" id="lego" autoplay controls muted loop
+            <video class="lozad" data-poster="./static/videos/mosaics/lego.jpg" id="lego" autoplay muted loop
               playsinline height="100%">
               <source data-src="./static/videos/mosaics/lego.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-lunch">
-            <video class="lozad" data-poster="./static/videos/mosaics/lunch.jpg" id="lunch" autoplay controls muted loop
+            <video class="lozad" data-poster="./static/videos/mosaics/lunch.jpg" id="lunch" autoplay muted loop
               playsinline height="100%">
               <source data-src="./static/videos/mosaics/lunch.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-plant">
-            <video class="lozad" data-poster="./static/videos/mosaics/plant.jpg" id="plant" autoplay controls muted loop
+            <video class="lozad" data-poster="./static/videos/mosaics/plant.jpg" id="plant" autoplay muted loop
               playsinline height="100%">
               <source data-src="./static/videos/mosaics/plant.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-reflective">
-            <video class="lozad" data-poster="./static/videos/mosaics/reflective.jpg" id="reflective" autoplay controls
-              muted loop playsinline height="100%">
+            <video class="lozad" data-poster="./static/videos/mosaics/reflective.jpg" id="reflective" autoplay muted
+              loop playsinline height="100%">
               <source data-src="./static/videos/mosaics/reflective.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-savannah">
-            <video class="lozad" data-poster="./static/videos/mosaics/savannah.jpg" id="savannah" autoplay controls
-              muted loop playsinline height="100%">
+            <video class="lozad" data-poster="./static/videos/mosaics/savannah.jpg" id="savannah" autoplay muted loop
+              playsinline height="100%">
               <source data-src="./static/videos/mosaics/savannah.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-shark">
-            <video class="lozad" data-poster="./static/videos/mosaics/shark.jpg" id="shark" autoplay controls muted loop
+            <video class="lozad" data-poster="./static/videos/mosaics/shark.jpg" id="shark" autoplay muted loop
               playsinline height="100%">
               <source data-src="./static/videos/mosaics/shark.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-stegosaurus">
-            <video class="lozad" data-poster="./static/videos/mosaics/stegosaurus.jpg" id="stegosaurus" autoplay
-              controls muted loop playsinline height="100%">
+            <video class="lozad" data-poster="./static/videos/mosaics/stegosaurus.jpg" id="stegosaurus" autoplay muted
+              loop playsinline height="100%">
               <source data-src="./static/videos/mosaics/stegosaurus.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-tapes">
-            <video class="lozad" data-poster="./static/videos/mosaics/tapes.jpg" id="tapes" autoplay controls muted loop
+            <video class="lozad" data-poster="./static/videos/mosaics/tapes.jpg" id="tapes" autoplay muted loop
               playsinline height="100%">
               <source data-src="./static/videos/mosaics/tapes.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-trucks">
-            <video class="lozad" data-poster="./static/videos/mosaics/trucks.jpg" id="trucks" autoplay controls muted
-              loop playsinline height="100%">
+            <video class="lozad" data-poster="./static/videos/mosaics/trucks.jpg" id="trucks" autoplay muted loop
+              playsinline height="100%">
               <source data-src="./static/videos/mosaics/trucks.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item item-wooden">
-            <video class="lozad" data-poster="./static/videos/mosaics/wooden.jpg" id="wooden" autoplay controls muted
-              loop playsinline height="100%">
+            <video class="lozad" data-poster="./static/videos/mosaics/wooden.jpg" id="wooden" autoplay muted loop
+              playsinline height="100%">
               <source data-src="./static/videos/mosaics/wooden.mp4" type="video/mp4">
             </video>
-          </div>
-          <div class="is-overlay">
-            <!-- <span class="tag is-primary">Image label on overlay</span> -->
-            <!-- <div class="legend-box"></div> -->
-            <div class="legend-boxes" id="first-legend-boxes">
-              <div class="legend-box gt">
-                <div class="legend-text-gt">cam 1 <strong>GT</strong></div>
-              </div>
-              <div class="legend-box estim">
-                <div class="legend-text-estim">cam 1 <strong>reNeRF</strong></div>
-              </div>
-              <div class="legend-box gt">
-                <div class="legend-text-gt">cam 2 <strong>GT</strong></div>
-              </div>
-              <div class="legend-box estim">
-                <div class="legend-text-estim">cam 2 <strong>reNeRF</strong></div>
-              </div>
-              <div class="legend-box gt">
-                <div class="legend-text-gt">cam 3 <strong>GT</strong></div>
-              </div>
-              <div class="legend-box estim">
-                <div class="legend-text-estim">cam 3 <strong>reNeRF</strong></div>
-              </div>
-            </div>
           </div>
         </div>
         <p style="text-align: center;"><strong style="color: hsl(141, 53%, 53%);">Left: </strong>Ground-truth
@@ -329,7 +301,7 @@
             </p>
             <p>
               To this end, we introduce a novel
-              dataset, dubbed ReNe (Relighting NeRF), framing real
+              dataset, dubbed ReNé (Relighting NeRF), framing real
               world objects under one-light-at-time (OLAT) conditions,
               annotated with accurate ground-truth camera and light
               poses.
@@ -353,12 +325,19 @@
       </div>
       <!--/ Abstract. -->
 
+      <!-- Architecture-->
+      <!-- <section class="section">
+        <div class="container is-max-desktop">
+        </div>
+      </section> -->
+      <!--/ Architecture -->
+
       <!-- Paper video. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Video</h2>
           <div class="publication-video">
-            <h2 class="title is-4">Coming Soon!</h2>
+            <h2 class="title is-5">Coming Soon!</h2>
             <!-- <iframe src="https://www.youtube.com/" frameborder="0"
               allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
           </div>
@@ -372,7 +351,7 @@
   <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@article{toschi2023rene,
+      <pre><code>@article{toschi2023relight,
   author    = {},
   title     = {},
   journal   = {},
@@ -404,7 +383,13 @@
       </div>
     </div>
   </footer>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"
+    integrity="sha512-F5QTlBqZlvuBEs9LQPqc1iZv2UMxcVXezbHzomzS6Df4MZMClge/8+gXrKw2fl5ysdk4rWjR0vKS7NNkfymaBQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </body>
 
 </html>
