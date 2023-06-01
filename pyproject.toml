@@ -6,6 +6,7 @@ build-backend = "hatchling.build"
 name = "rene"
 authors = [
   { name="Daniele De Gregorio", email="daniele.degregorio@eyecan.ai" },
+  { name="Marco Toschi", email="marco.toschi@eyecan.ai" },
 ]
 description = "ReNe Dataset package"
 readme = "README.md"
@@ -27,7 +28,8 @@ keywords = [
 ]
 dependencies = [
     "pipelime-python",
-    "albumentations"
+    "gdown", #TODO: Will gdown work?
+    "rich",
 ]
 dynamic = [ "version" ]
 
@@ -47,7 +49,13 @@ build = [
 ]
 
 [project.scripts]
-rene = "rene.main:main"
+rene = "rene:app"
 
 [tool.hatch.version]
 path = "rene/__init__.py"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.ruff]
+ignore = ["F401", "F841", "F722", "E501"]

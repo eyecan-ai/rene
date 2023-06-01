@@ -1,8 +1,0 @@
-object_id: [0,1,2,3,4,5,6,7,8,9]
-# object_id: 0
-cameras: [10,30]
-lights: [35,29,25,19,15]
-crop: [180, 64, 1000, 650]
-borders: 5
-borders_color: [255,255,255]
-outer_border: False
