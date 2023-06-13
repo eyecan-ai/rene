@@ -28,8 +28,8 @@ keywords = [
 ]
 dependencies = [
     "pipelime-python",
-    "gdown", #TODO: Will gdown work?
     "rich",
+    "matplotlib",
 ]
 dynamic = [ "version" ]
 
