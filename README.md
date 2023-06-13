@@ -8,6 +8,7 @@ To install the package, run the following command:
 git clone git@github.com:eyecan-ai/rene.git
 pip install .
 ```
+It has been tested with python 3.9, should work even with python >= 3.8.
 
 ## ⬇️ Download the dataset
 To download the dataset, run the following command:
