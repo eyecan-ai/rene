@@ -1,4 +1,4 @@
-# ReNé Dataset
+# Relight My Nerf - A Dataset for Novel View Synthesis and Relighting of Real World Objects
 
 This package contains commands to manage the dataset for the Relight My Nerf project. The architecture of the network is not included in this package, nor the training scripts. This package is only for managing the dataset.
 
@@ -80,4 +80,17 @@ plt.imshow(image)
 plt.show()
 
 ```
-To see a more advanced example you can check the `show` command in the `rene/cli/show.py` file.
+To see a more advanced example you can check the commands inside `rene/cli` files.
+
+## Citation
+If you use this dataset, please cite the following paper:
+```
+@InProceedings{Toschi_2023_CVPR,
+          author    = {Toschi, Marco and De Matteo, Riccardo and Spezialetti, Riccardo and De Gregorio, Daniele and Di Stefano, Luigi and Salti, Samuele},
+          title     = {ReLight My NeRF: A Dataset for Novel View Synthesis and Relighting of Real World Objects},
+          booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+          month     = {June},
+          year      = {2023},
+          pages     = {20762-20772}
+        }
+```
