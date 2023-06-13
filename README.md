@@ -14,7 +14,7 @@ To download the dataset, run the following command:
 ```bash
 rene download +o /path/to/rene_zips_folder
 ```
-If the download fails, you can always download the dataset manually from [this Google Drive Folder](https://drive.google.com/drive/folders/1sYRAe9L-M47aaky2ueamIksJjZvayDcU) and place the zip files in `/path/to/rene_zips_folder`.
+If the download fails, you can always download the dataset manually from [this Google Drive Folder](https://drive.google.com/drive/folders/1ONYpV6OkmKNQuchfQSkOhuh8gBJKfYY8?usp=drive_link) and place the zip files in `/path/to/rene_zips_folder`.
 
 Mind that:
 - Poses are annotated in OpenCV coordinate system convention.
@@ -35,6 +35,9 @@ As a check if everying went well, you can show the dataset with the following co
 ```bash
 rene show +i /path/to/rene_parent_folder
 ```
+This will show a window similar to the following:
+
+https://github.com/eyecan-ai/rene/assets/23316277/51fac737-05ed-4d20-bdac-3687f44f4f1d
 
 ## Handle the dataset
 We use `pipelime-python` to handle the dataset, it's automatically installed when you install the package, but you can find the documentation [here](https://pipelime-python.readthedocs.io/en/latest/).
