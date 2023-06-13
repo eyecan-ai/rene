@@ -3,12 +3,13 @@
 This package contains commands to manage the dataset for the Relight My Nerf project. The architecture of the network is not included in this package, nor the training scripts. This package is only for managing the dataset.
 
 ## 👷‍♀️ Install the management package
-To install the package, run the following command:
+To install the package, run the following command in a python venv:
 ```bash
 git clone git@github.com:eyecan-ai/rene.git
+cd rene
 pip install .
 ```
-It has been tested with python 3.9, should work even with python >= 3.8.
+It has been tested with python 3.9 on Ubuntu 22.04, should work even with python >= 3.8 and hopefully in another OS.
 
 ## ⬇️ Download the dataset
 To download the dataset, run the following command:
