@@ -145,18 +145,19 @@ def show(
     scatter_light.set_picker(True)
     ax1.axis("off")
 
-    # Create the buttons
-    btns = {}
-    for i, k in enumerate(list(rene_thumb.keys())):
-        n = len(rene_thumb.keys())
-        btns[k] = {}
-        btns[k]["ax"] = fig.add_axes([1 / n * i, 1 / n, 1 / n, 1 / n])
-        btns[k]["ax"].set_title("click on a scene") if i == n // 2 else None
-        btns[k]["obj"] = Button(btns[k]["ax"], "", image=rene_thumb[k])
-
     # Create the image plot
     ax2 = fig.add_subplot(122)
     ax2.axis("off")
+
+    # Create the buttons
+    btns = {}
+    fig.text(0.5, 0.065, "click on a scene", ha="center", fontsize=12)
+    n = len(rene_thumb.keys())
+    shift = 0.5 - (n // 2) / 21 if n % 2 == 0 else 0.5 - (n // 2) / (21 - 1)
+    for i, k in enumerate(list(rene_thumb.keys())):
+        btns[k] = {}
+        btns[k]["ax"] = fig.add_axes([1 / 21 * i + shift, 0.01, 1 / 21, 1 / 21])
+        btns[k]["obj"] = Button(btns[k]["ax"], "", image=rene_thumb[k])
 
     #######################
     # CALLBACK DEFINITION #

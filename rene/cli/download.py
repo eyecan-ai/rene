@@ -5,27 +5,26 @@ import rene.cli as c
 
 
 @c.command(title="download")
-def download_scene(
-    output_folder: Path = c.Field(
-        ...,
-        alias="o",
-        description="The folder where to download the scenes",
-        piper_port=c.OUT,
-    ),
+def download(
+    output_folder: Path = c.Field(..., alias="o", description="Folder with ReNé zips"),
     scene_name: t.Union[str, t.List[str]] = c.Field(
         [],
         alias="s",
-        description="The name of the scene to download, if None all scenes will be downloaded",
-        piper_port=c.IN,
+        description="Specify this argument to download only a subset of the scenes",
     ),
 ):
     """
     Download a scene from the dataset
     """
-    import gdown
+    import wget
     from rich import print
 
     from rene.utils import DATA_URLS
+
+    # Literals for Google Drive
+    GPREFIX = "https://docs.google.com/uc?export=download&confirm=t&id="
+    GSTART = "https://drive.google.com/file/d/"
+    GEND = "/view?usp=drive_link"
 
     output_folder.mkdir(exist_ok=True, parents=True)
 
@@ -51,9 +50,9 @@ def download_scene(
             continue
 
         try:
-            out = gdown.download(
-                id=DATA_URLS[n], output=str(output_folder / f"{n}.zip")
-            )
+            id = (DATA_URLS[n].split(GSTART))[1].split(GEND)[0]
+            out = wget.download(f"{GPREFIX}{id}", str(output_folder / f"{n}.zip"))
+            print("\n")
             if out is None:
                 raise Exception()
         except Exception as e:
@@ -65,6 +64,7 @@ def download_scene(
             downloaded.append(n)
 
     # Summary of downloaded scenes
+    print("\n")
     print(f"[bold]Downloaded {len(downloaded)}/{len(ns)} scenes[/bold]")
     print(f"[bold]Existing {len(existing)}/{len(ns)} scenes[/bold]")
     print(f"[bold]Failed {len(failed)}/{len(ns)} scenes[/bold]")

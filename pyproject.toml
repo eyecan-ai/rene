@@ -30,6 +30,7 @@ dependencies = [
     "pipelime-python",
     "rich",
     "matplotlib",
+    "wget",
 ]
 dynamic = [ "version" ]
 
