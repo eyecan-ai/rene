@@ -84,6 +84,28 @@ plt.show()
 ```
 To see a more advanced example you can check the commands inside `rene/cli` files.
 
+## 🪑 Benchmark
+To send your test images you will need to upload and send the link of a zip file with the following structure:
+
+```
+📦 rene_test_images.zip
+├── 🖼️ apple_00_04.png
+├── 🖼️ apple_00_08.png
+├── 🖼️ apple_00_15.png
+...
+├── 🖼️ apple_39_04.png
+├── 🖼️ apple_39_08.png
+├── 🖼️ apple_39_15.png
+├── 🖼️ cheetah_00_04.png
+...
+├── 🖼️ cheetah_39_15.png
+├── 🖼️ cube_00_04.png
+...
+```
+The format for each image is: `{scene_name}_{light_idx}_{cam_idx}.png` and they need to be at the root level of the zip file.
+Each scene will have 111 images for the easy test and 9 for the hard test, for a total of 120 * 20 = 2400 images, your zip archive should contain exactly this number of files.
+At the time of writing, the link of your zip file should be sent to any email address with the suffix `eyecan.ai` present in the paper.
+
 ## 🖋️ Citation
 If you use this dataset, please cite the following paper:
 ```
