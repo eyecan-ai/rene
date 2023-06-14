@@ -19,8 +19,8 @@ rene download +o /path/to/rene_zips_folder
 If the download fails, you can always download the dataset manually from [this Google Drive Folder](https://drive.google.com/drive/folders/1ONYpV6OkmKNQuchfQSkOhuh8gBJKfYY8?usp=drive_link) and place the zip files in `/path/to/rene_zips_folder`.
 
 Mind that:
-- Poses are annotated in OpenCV coordinate system convention.
-- Camera matrix is the one returned by OpenCV's `calibrateCamera()` function.
+- Poses are annotated in COLMAP/OpenCV coordinate system convention: [+Z points upward]
+- Camera matrix is the one returned by OpenCV's `calibrateCamera()` function: [Forward: +Z, Up: -Y, Right: +X].
 - Test images are blacked out and their indices are following the table on the paper.
 - We also recovered an empty scene (only lighting change, no objects), it's the one called "empty_public.zip".
 
