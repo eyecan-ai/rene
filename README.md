@@ -84,7 +84,56 @@ plt.show()
 ```
 To see a more advanced example you can check the commands inside `rene/cli` files.
 
-## 🪑 Benchmark
+## 🧪 Testing your Network
+Here is a sample script that show how the test images can be generated, given your trained network `MyCoolModel`:
+```python
+from pathlib import Path
+
+import imageio as iio
+import numpy as np
+from rich import print
+from rich.progress import track
+
+from rene.utils import DATA_KEYS, X_CAMS
+from rene.utils.loaders import lazy_load
+
+INPUT_FOLDER = Path("/path/to/rene_parent_folder")
+OUTPUT_FOLDER = Path("/path/to/rene_test_folder")
+
+
+# Define you cool model here
+class MyCoolModel:
+    # This model is just a random image generator
+    def __call__(self, camera, *args):
+        w, h = camera["intrinsics"]["image_size"]
+        return (np.random.standard_normal([h, w, 3]) * 255).astype(np.uint8)
+
+
+# Create the output folder
+OUTPUT_FOLDER.mkdir(exist_ok=True, parents=True)
+
+# Load the dataset
+rene = lazy_load(INPUT_FOLDER)
+
+my_cool_model = MyCoolModel()  # <--- THIS IS YOUR CUSTOM MODEL
+
+# We iterate over the dataset, we predict and save the images
+for key in DATA_KEYS:
+    print(f"Testing [bold][green]{key}[/green][/bold]:")
+    for cam in X_CAMS:
+        for lit in track(range(40), description=f"[yellow]camera {cam}[/yellow]"):
+            s = rene[key][lit][cam]
+
+            ### YOUR CUSTOM PREDICTION ----------------------------------
+            pred = my_cool_model(s["camera"](), s["pose"](), s["light"]())
+            ### YOUR CUSTOM PREDICTION ----------------------------------
+
+            filename = f"{key}_{str(lit).zfill(2)}_{str(cam).zfill(2)}.png"
+            iio.imwrite(OUTPUT_FOLDER / filename, pred, compress_level=4)
+```
+This will save in the `OUTPUT_FOLDER` the files ready for the next step, benchmarking!
+
+## 🪑 Contribute to the Benchmark
 To send your test images you will need to upload and send the link of a zip file with the following structure:
 
 ```
@@ -107,7 +156,7 @@ Each scene will have 111 images for the easy test and 9 for the hard test, for a
 At the time of writing, the link of your zip file should be sent to any email address with the suffix `eyecan.ai` present in the paper.
 
 ## 🖋️ Citation
-If you use this dataset, please cite the following paper:
+If you find this dataset useful, please give us a github star, if you were crazy enough to download the dataset and it was useful to you in some way for your work, it would be great if you would cite us:
 ```
 @InProceedings{Toschi_2023_CVPR,
           author    = {Toschi, Marco and De Matteo, Riccardo and Spezialetti, Riccardo and De Gregorio, Daniele and Di Stefano, Luigi and Salti, Samuele},
