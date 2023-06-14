@@ -16,7 +16,7 @@ To download the dataset, run the following command:
 ```bash
 rene download +o /path/to/rene_zips_folder
 ```
-If the download fails, you can always download the dataset manually from [this Google Drive Folder](https://drive.google.com/drive/folders/1ONYpV6OkmKNQuchfQSkOhuh8gBJKfYY8?usp=drive_link) and place the zip files in `/path/to/rene_zips_folder`.
+⚠️ Due to google drive limitations, it is possible that the above script will fail after downloading half of the scenes (or less). If the download fails, you can always download manually the remaining scenes from [this Google Drive Folder](https://drive.google.com/drive/folders/1ONYpV6OkmKNQuchfQSkOhuh8gBJKfYY8?usp=drive_link) and place the zip files in `/path/to/rene_zips_folder`.
 
 Mind that:
 - Poses are annotated in COLMAP/OpenCV coordinate system convention: [+Z points upward]
