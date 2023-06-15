@@ -259,3 +259,56 @@ body {
   right: 0;
   background-color: hsl(141, 53%, 53%);
 }
+
+#leaderboard-overlay {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  font-size: 120%;
+  font-weight: 900;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  backdrop-filter: blur(8px);
+  width: max-content;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, hsl(171deg 100% 41%), hsl(48deg 100% 67%), hsl(300deg 100% 73%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-weight: bold;
+}
+
+#leaderboard-overlay:hover {
+  animation: glowing 1.5s infinite;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px hsl(171deg 100% 41%);
+    border-radius: 10px;
+  }
+
+  50% {
+    box-shadow: 0 0 20px hsl(171deg 100% 41%);
+    border-radius: 10px;
+  }
+
+  100% {
+    box-shadow: 0 0 5px hsl(171deg 100% 41%);
+    border-radius: 10px;
+  }
+}
+
+table td,
+table th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.citation-text {
+  font-weight: bold;
+  font-style: italic;
+  color: #888;
+}

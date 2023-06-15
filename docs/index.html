@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-responsive-tables.main.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -93,25 +94,24 @@
                     <span>Video</span>
                   </a>
                 </span>
-                <!-- Code Link. -->
-                <!-- <span class="link-block">
-                  <a href="https://github.com/eyecan-ai" class="external-link button is-normal is-rounded is-dark"
-                    style="background-color:#808080; pointer-events: none;">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span> -->
                 <!-- Dataset Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/eyecan-ai" class="external-link button is-normal is-rounded is-dark"
-                    style="background-color:#808080; pointer-events: none;">
+                  <a href="https://github.com/eyecan-ai/rene" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="far fa-images"></i>
                     </span>
                     <span>Data</span>
                   </a>
+                </span>
+                <!-- Leaderboards anchor -->
+                <span class="link-block">
+                  <a href="#leaderboard" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-chart-line	"></i>
+                    </span>
+                    <span>Leaderboard</span>
+                  </a>
+                </span>
               </div>
             </div>
           </div>
@@ -349,10 +349,263 @@
     </div>
   </section>
 
+  <!-- Leaderboards -->
+  <section id="leaderboard" class="section has-text-centered">
+    <div class="container">
+      <h2 class="title is-3">Leaderboard</h2>
+      <div class="b-table">
+        <div class="table-wrapper">
+          <table class="table is-fullwidth is-striped is-hoverable is-fullwidth">
+            <thead style="font-size: 70%;">
+              <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>Apple</th>
+                <th>Cheetah</th>
+                <th>Cube</th>
+                <th>Dinosaurs</th>
+                <th>FlipFlop</th>
+                <th>Fruits</th>
+                <th>Garden</th>
+                <th>Helicopters</th>
+                <th>Kittens</th>
+                <th>Lego</th>
+                <th>Lunch</th>
+                <th>Plant</th>
+                <th>Reflective</th>
+                <th>Robotoy</th>
+                <th>Savannah</th>
+                <th>Shark</th>
+                <th>Stegosaurus</th>
+                <th>Tapes</th>
+                <th>Trucks</th>
+                <th>Wooden</th>
+                <th>Average</th>
+              </tr>
+            </thead>
+            <tbody style="font-size: 70%; vertical-align: middle; text-align: center;">
+              <tr>
+                <div id="leaderboard-overlay">
+                  <a href="https://github.com/eyecan-ai/rene">
+                    <p>
+                      <div class="gradient-text">To learn more about how to contribute with your results, please click
+                        here!</div>
+                    </p>
+                  </a>
+                </div>
+                <td rowspan="4" style="vertical-align: middle;"><strong>Yours</strong></td>
+                <td rowspan="2" style="vertical-align: middle;">Easy</td>
+                <td>PSNR</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><strong></strong></td>
+              </tr>
+              <tr>
+                <td>SSIM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><strong></strong></td>
+              </tr>
+              <tr>
+                <td rowspan="2" style="vertical-align: middle;">Hard</td>
+                <td>PSNR</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><strong></strong></td>
+              </tr>
+              <tr>
+                <td>SSIM</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><strong></strong></td>
+              </tr>
+              <tr>
+                <td rowspan="4" style="vertical-align: middle;"><strong>Ours</strong></td>
+                <td rowspan="2" style="vertical-align: middle;">Easy</td>
+                <td>PSNR</td>
+                <td>26.44</td>
+                <td>25.66</td>
+                <td>24.90</td>
+                <td>25.75</td>
+                <td>25.85</td>
+                <td>25.93</td>
+                <td>25.74</td>
+                <td>25.12</td>
+                <td>25.90</td>
+                <td>26.07</td>
+                <td>25.84</td>
+                <td>26.55</td>
+                <td>25.79</td>
+                <td>26.24</td>
+                <td>25.15</td>
+                <td>25.59</td>
+                <td>25.87</td>
+                <td>25.84</td>
+                <td>25.80</td>
+                <td>25.69</td>
+                <td><strong>25.79</strong></td>
+              </tr>
+              <tr>
+                <td>SSIM</td>
+                <td>0.62</td>
+                <td>0.61</td>
+                <td>0.54</td>
+                <td>0.65</td>
+                <td>0.61</td>
+                <td>0.62</td>
+                <td>0.66</td>
+                <td>0.61</td>
+                <td>0.64</td>
+                <td>0.61</td>
+                <td>0.60</td>
+                <td>0.67</td>
+                <td>0.61</td>
+                <td>0.65</td>
+                <td>0.62</td>
+                <td>0.57</td>
+                <td>0.63</td>
+                <td>0.58</td>
+                <td>0.67</td>
+                <td>0.61</td>
+                <td><strong>0.62</strong></td>
+              </tr>
+              <tr>
+                <td rowspan="2" style="vertical-align: middle;">Hard</td>
+                <td>PSNR</td>
+                <td>26.25</td>
+                <td>24.64</td>
+                <td>23.98</td>
+                <td>24.98</td>
+                <td>25.42</td>
+                <td>25.72</td>
+                <td>25.08</td>
+                <td>24.73</td>
+                <td>24.96</td>
+                <td>25.77</td>
+                <td>24.71</td>
+                <td>25.93</td>
+                <td>25.20</td>
+                <td>25.55</td>
+                <td>24.31</td>
+                <td>25.32</td>
+                <td>25.65</td>
+                <td>25.41</td>
+                <td>25.16</td>
+                <td>25.24</td>
+                <td><strong>25.20</strong></td>
+              </tr>
+              <tr>
+                <td>SSIM</td>
+                <td>0.62</td>
+                <td>0.60</td>
+                <td>0.53</td>
+                <td>0.64</td>
+                <td>0.61</td>
+                <td>0.62</td>
+                <td>0.66</td>
+                <td>0.61</td>
+                <td>0.63</td>
+                <td>0.61</td>
+                <td>0.59</td>
+                <td>0.67</td>
+                <td>0.61</td>
+                <td>0.65</td>
+                <td>0.61</td>
+                <td>0.56</td>
+                <td>0.63</td>
+                <td>0.57</td>
+                <td>0.66</td>
+                <td>0.60</td>
+                <td><strong>0.61</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </section>
+  <!--/ Leaderboards -->
 
-  <section class="section" id="BibTeX">
+
+  <section class="section" id="Citation">
     <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
+      <h2 class="title">Citation</h2>
+      <p>
+        <span class="citation-text">If you find this work useful or reference it in your research, kindly consider
+          citing:</span>
+      </p>
       <pre><code>
         @InProceedings{Toschi_2023_CVPR,
           author    = {Toschi, Marco and De Matteo, Riccardo and Spezialetti, Riccardo and De Gregorio, Daniele and Di Stefano, Luigi and Salti, Samuele},
