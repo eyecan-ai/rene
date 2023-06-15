@@ -22,6 +22,10 @@ class ReneDataset(BaseModel):
         >>> image = sample["image"]()
     """
 
+    input_folder: Path = Field(..., description="ReNé parent folder")
+    image_max_size: int = Field(1440, description="Resize images to smallest max size")
+    thumb_max_size: int = Field(1440, description="Resize thumbs to smallest max size")
+
     _KEYS_TO_LOAD: t.Sequence = PrivateAttr(
         [
             "apple",
@@ -47,11 +51,10 @@ class ReneDataset(BaseModel):
             "kittens",
         ]
     )
+    _TEST_CAMS = [4, 8, 15]
+    _TEST_LIGHTS = [2, 21, 34]
     _IM_SZ = (1440, 1080)
 
-    input_folder: Path = Field(..., description="ReNé parent folder")
-    image_max_size: int = Field(540, description="Resize images to smallest max size")
-    thumb_max_size: int = Field(128, description="Resize thumbs to smallest max size")
     _data: t.MutableMapping[str, t.List[SS]] = PrivateAttr()
 
     def __getitem__(self, key: str) -> t.List[SS]:
@@ -104,6 +107,18 @@ class ReneDataset(BaseModel):
             List[str]: The keys of the dataset.
         """
         return list(self._data.keys())
+
+    def get_test_cams(self) -> t.List[int]:
+        """
+        Return the test cameras indices.
+        """
+        return self._TEST_CAMS
+
+    def get_test_lights(self) -> t.List[int]:
+        """
+        Return the test lights indices.
+        """
+        return self._TEST_LIGHTS
 
     def __repr__(self) -> str:
         """

@@ -24,7 +24,11 @@ def show(
     # DATASET LAZY LOADING #
     ########################
 
-    rene = ReneDataset(input_folder=input_folder)
+    rene = ReneDataset(
+        input_folder=input_folder,
+        image_max_size=540,
+        thumb_max_size=144,
+    )
 
     ##########################
     # FIGURE INITIIALIZATION #
