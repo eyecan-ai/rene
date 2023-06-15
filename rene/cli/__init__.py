@@ -25,7 +25,11 @@ to see them when calling "nsext list" from command line
 They should go here below to avoid circular imports
 """
 
+from rene.cli.benchmark import check_format, convert_scene
+from rene.cli.copy_calibration import copy_calib, fix_calib_cam
 from rene.cli.download import download
+from rene.cli.filter import filter_calibration
+from rene.cli.png_to_jpg import convert
 from rene.cli.show import show
 from rene.cli.split import blackout
 from rene.cli.zipp import compress, extract
