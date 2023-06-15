@@ -128,18 +128,3 @@ class ReneDataset(BaseModel):
             str: A string representation of the keys in the dataset.
         """
         return f"ReneDataset(available_keys={list(self._data.keys())})"
-
-
-if __name__ == "__main__":
-    import matplotlib.pyplot as plt
-
-    rene = ReneDataset(
-        input_folder=Path("/media/marco/OS/Documents and Settings/marco/rene_dataset")
-    )
-    print(rene)
-    print(rene.keys())
-    sample = rene["apple"][12][34]
-    plt.imshow(sample["image"]())
-    plt.show()
-    plt.imshow(sample["thumb"]())
-    plt.show()
