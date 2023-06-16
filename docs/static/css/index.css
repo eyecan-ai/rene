@@ -269,7 +269,6 @@ body {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   backdrop-filter: blur(8px);
-  width: max-content;
 }
 
 .gradient-text {

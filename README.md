@@ -1,6 +1,10 @@
 # Relight My Nerf - A Dataset for Novel View Synthesis and Relighting of Real World Objects
 
-This package contains commands to manage the dataset for the Relight My Nerf project. The architecture of the network is not included in this package, nor the training scripts. This package is only for managing the dataset.
+This package contains commands to manage the dataset for the [Relight My Nerf](https://eyecan-ai.github.io/rene) project. The architecture of the network is not included in this package, nor the training scripts. This package is only for managing the dataset.
+
+ ### [Install](#️👷‍♀️-install-the-management-package)  |  [Download](#⬇️-download-the-dataset)  |  [Structure](#📝-dataset-structure)  |  [What's inside](#👁️-show-the-dataset)  |  [How to Use it](#🛼-handle-the-dataset)  |  [Benchmark](#🪑-contribute-to-the-benchmark)
+
+<br>
 
 ## 👷‍♀️ Install the management package
 To install the package, run the following command in a python venv:
